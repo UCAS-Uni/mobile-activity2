@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyTextBox extends StatelessWidget {
+class TextBox extends StatelessWidget {
   String text;
   double? width;
   double? hight;
 
-  MyTextBox({super.key, required this.text, this.hight, this.width});
+  TextBox({super.key, required this.text, this.hight, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class MyTextBox extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            color: Color.fromARGB(255, 231, 151, 133),
+            color: Color.fromARGB(255, 244, 166, 148),
             width: width,
             height: hight,
           ),
@@ -23,7 +23,7 @@ class MyTextBox extends StatelessWidget {
             text,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 50,
+              fontSize: 40,
             ),
           )
         ],

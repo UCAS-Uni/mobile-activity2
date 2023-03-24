@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'my_text_box.dart';
+import 'text_box.dart';
 
-class OurRow extends StatelessWidget {
-  String one, two, three, four, five;
-  OurRow({
-    super.key,
-    required this.one,
-    required this.two,
-    required this.three,
-    required this.four,
-    required this.five,
-  });
+class RowComp extends StatelessWidget {
+  String firstText, secondText, thirdText, fourthText, fifthText;
+  RowComp(
+    this.firstText,
+    this.secondText,
+    this.thirdText,
+    this.fourthText,
+    this.fifthText,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +21,8 @@ class OurRow extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: MyTextBox(
-                    text: one,
+                  child: TextBox(
+                    text: firstText,
                     width: double.infinity,
                   ),
                 )
@@ -37,13 +36,13 @@ class OurRow extends StatelessWidget {
                   child: Row(
                     children: [
                       Expanded(
-                        child: MyTextBox(
-                          text: two,
+                        child: TextBox(
+                          text: secondText,
                         ),
                       ),
                       Expanded(
-                        child: MyTextBox(
-                          text: three,
+                        child: TextBox(
+                          text: thirdText,
                         ),
                       ),
                     ],
@@ -53,13 +52,13 @@ class OurRow extends StatelessWidget {
                   child: Row(
                     children: [
                       Expanded(
-                        child: MyTextBox(
-                          text: four,
+                        child: TextBox(
+                          text: fourthText,
                         ),
                       ),
                       Expanded(
-                        child: MyTextBox(
-                          text: five,
+                        child: TextBox(
+                          text: fifthText,
                         ),
                       ),
                     ],

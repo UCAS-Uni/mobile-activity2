@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/body.dart';
+import 'views/body.dart';
 
 void main() {
   runApp(const Activity2());
