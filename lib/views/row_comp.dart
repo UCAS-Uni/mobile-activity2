@@ -33,42 +33,33 @@ class RowComp extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextBox(
-                          text: secondText,
-                        ),
-                      ),
-                      Expanded(
-                        child: TextBox(
-                          text: thirdText,
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: SubRow(secondText, thirdText),
                 ),
                 Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextBox(
-                          text: fourthText,
-                        ),
-                      ),
-                      Expanded(
-                        child: TextBox(
-                          text: fifthText,
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: SubRow(fourthText, fifthText),
                 ),
               ],
             ),
           )
         ],
       ),
+    );
+  }
+
+  Row SubRow(String text1, String text2) {
+    return Row(
+      children: [
+        Expanded(
+          child: TextBox(
+            text: text1,
+          ),
+        ),
+        Expanded(
+          child: TextBox(
+            text: text2,
+          ),
+        ),
+      ],
     );
   }
 }
